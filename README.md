@@ -1,2 +1,3 @@
-# ACIT4420-study-reminders
-Assignment 2 of ACIT4420 to send personalized study reminders
+# Study Reminders
+
+Contains modules for creating automized study reminders by student name, email address, preferred study time, and favorite course.
