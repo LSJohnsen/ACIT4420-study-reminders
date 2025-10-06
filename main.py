@@ -18,7 +18,7 @@ json is currently cleared before every test, remove save_students()
 if __name__ == "__main__":
     manager = StudentsManager()
 
-    # Manage -> personalized reminder -> simulate sending reminder -> log operations -> schedule daily execution scheduler.py
+    # Manage -> personalized reminder -> simulate sending reminder -> log operations -> schedule dailye execution scheduler.py
     
     while True:
 
@@ -66,7 +66,7 @@ if __name__ == "__main__":
         else:
             print("Invalid choice!")
         
-        
+
     #reminder_generator = generate_reminder(name, course)
     #reminder_sender = send_reminder(email, reminder)
     #log_operation = log_reminder(student, reminder)
