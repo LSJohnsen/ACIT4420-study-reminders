@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.py
+study_reminders/__init__.py
+study_reminders/main.py
+study_reminders/utils/__init__.py
+study_reminders/utils/logger.py
+study_reminders/utils/reminder_generator.py
+study_reminders/utils/reminder_sender.py
+study_reminders/utils/scheduler.py
+study_reminders/utils/student_manager.py
+studyreminders.egg-info/PKG-INFO
+studyreminders.egg-info/SOURCES.txt
+studyreminders.egg-info/dependency_links.txt
+studyreminders.egg-info/entry_points.txt
+studyreminders.egg-info/top_level.txt

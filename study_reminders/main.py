@@ -1,27 +1,20 @@
 
-from logger import log_reminder 
-from reminder_sender import send_reminder
-from reminder_generator import generate_reminder 
-from scheduler import schedule_reminder
-from student_manager import StudentsManager
-from students import Students
+from study_reminders.utils.logger import log_reminder
+from study_reminders.utils.reminder_sender import send_reminder
+from study_reminders.utils.reminder_generator import generate_reminder
+from study_reminders.utils.scheduler import schedule_reminder
+from study_reminders.utils.student_manager import StudentsManager
 
-"""
-Main module:
-
-initialize the StudentsManager class where methods can be used to add/remove.... students
-schedule_reminder is called with the manager object containing student list to initialize scheduler for study reminder
-
-json is currently cleared before every test, remove save_students()
-"""
-
-if __name__ == "__main__":
+def main():
+    """
+    Main module:
+    Initializes the StudentsManager class where methods can be used to add/remove students etc.
+    schedule_reminder is called with the studentmanager object containing student list to initialize the scheduler for study reminders
+    """
     manager = StudentsManager()
 
-    # Manage -> personalized reminder -> simulate sending reminder -> log operations -> schedule daily execution scheduler.py
-    
+    # Choice of mode allows for manual testing as well as initializing automatic study reminders
     while True:
-
         mode = str(input("\nChoose an option to:\n" \
     "1) clear the JSON file containing ALL student info\n" \
     "2) add new students to the file\n" \
@@ -38,7 +31,7 @@ if __name__ == "__main__":
             name = str(input("\nEnter the student name: ")).strip()
             email = str(input("\nEnter the student email address: ")).strip().replace(" ", "")
             course = str(input("\nEnter the student's favorite course: ")).strip().replace(" ", "")
-            time = str(input("\nEnter the preffered study time (AM/PM or military time): ")).strip().replace(" ", "")
+            time = str(input("\nEnter the preferred study time (AM/PM or military time): ")).strip().replace(" ", "")
             manager.add_students(name, email, course, time)
             manager.save_students()
             print(f"\n--- Adding student:  {name}---")
@@ -49,7 +42,7 @@ if __name__ == "__main__":
             manager.save_students()
 
         elif mode == '4':   
-            print("\ncurrent list of students:\n")
+            print("\nCurrent list of students:\n")
             manager.list_students()
 
         elif mode == '5': 
@@ -59,15 +52,13 @@ if __name__ == "__main__":
                       send_reminder,
                       log_reminder)
             
-        elif mode == 'q' or mode == 'Q':
+        elif mode.lower() == 'q':
             print("\nQuitting")
             break
             
         else:
             print("Invalid choice!")
-        
-        
-    #reminder_generator = generate_reminder(name, course)
-    #reminder_sender = send_reminder(email, reminder)
-    #log_operation = log_reminder(student, reminder)
-    #schedule_reminder(students_manager, reminder_generator, reminder_sender, logger):
+
+
+if __name__ == "__main__":
+    main()

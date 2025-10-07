@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: studyreminders
+Version: 1.0.1
+Summary: Automated study reminder package
+Home-page: https://github.com/LSJohnsen/ACIT4420-study-reminders
+Author: Lars Johnsen
+Author-email: s359056@oslomet.no
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
