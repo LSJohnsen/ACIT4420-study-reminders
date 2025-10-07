@@ -1,0 +1,9 @@
+2025-10-06 15:03:53.812679 - Sent to Alice: Hi Alice, remember to review Math materials before the deadline!
+2025-10-06 15:19:53.217942 - Sent to Alice: Hi Eskil, remember to review Physics materials before the deadline!
+2025-10-06 16:09:15.339844 - Sent to Alice: Hi Truls, remember to review Robotics materials before the deadline!
+2025-10-06 16:09:15.342086 - Sent to Bob: Hi Truls, remember to review Robotics materials before the deadline!
+2025-10-06 16:10:15.342373 - Sent to Lars: Hi Truls, remember to review Robotics materials before the deadline!
+2025-10-06 16:19:18.525699 - Sent to Alice: Hi Truls, remember to review Robotics materials before the deadline!
+2025-10-06 16:23:08.528971 - Sent to Alice: Hi Alice, remember to review Math materials before the deadline!
+2025-10-06 16:24:08.545459 - Sent to Bob: Hi Bob, remember to review Physics materials before the deadline!
+2025-10-06 16:24:08.546478 - Sent to Lars: Hi Lars, remember to review Math materials before the deadline!
