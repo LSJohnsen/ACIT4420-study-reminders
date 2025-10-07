@@ -19,7 +19,7 @@ Allows for managing student info, generating reminders, as well as automatic dai
   
     
 ## Application
-  Run to studyreminders and choose option from menu:
+  Run to study-reminders and choose option from menu:
   
 ```
 Choose an option to:
@@ -31,3 +31,4 @@ Choose an option to:
 q) quit
 
 ```
+
