@@ -1,27 +1,25 @@
 
-from logger import log_reminder 
-from reminder_sender import send_reminder
-from reminder_generator import generate_reminder 
-from scheduler import schedule_reminder
-from student_manager import StudentsManager
+from modules.logger import log_reminder 
+from modules.reminder_sender import send_reminder
+from modules.reminder_generator import generate_reminder 
+from modules.scheduler import schedule_reminder
+from modules.student_manager import StudentsManager
 from students import Students
 
 """
 Main module:
 
-initialize the StudentsManager class where methods can be used to add/remove.... students
-schedule_reminder is called with the manager object containing student list to initialize scheduler for study reminder
+initializes the StudentsManager class where methods can be used to add/remove students etc.
+schedule_reminder is called with the studentmanager object containing student list to initialize the scheduler for study reminders
 
-json is currently cleared before every test, remove save_students()
 """
 
 if __name__ == "__main__":
     manager = StudentsManager()
 
-    # Manage -> personalized reminder -> simulate sending reminder -> log operations -> schedule dailye execution scheduler.py
+    # choice of mode allows for manual testing as well as initializing the automatic study reminders
     
     while True:
-
         mode = str(input("\nChoose an option to:\n" \
     "1) clear the JSON file containing ALL student info\n" \
     "2) add new students to the file\n" \
@@ -65,9 +63,3 @@ if __name__ == "__main__":
             
         else:
             print("Invalid choice!")
-        
-
-    #reminder_generator = generate_reminder(name, course)
-    #reminder_sender = send_reminder(email, reminder)
-    #log_operation = log_reminder(student, reminder)
-    #schedule_reminder(students_manager, reminder_generator, reminder_sender, logger):

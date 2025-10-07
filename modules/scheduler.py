@@ -1,13 +1,14 @@
 import schedule
 import time
-from datetime import datetime # https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior
-from logger import log_reminder_error, log_reminder_generation
+from datetime import datetime
+from modules.logger import log_reminder_error, log_reminder_generation
 
 '''
 Schedules daily reminders for students at their preferred study time.
 original for loop only registers first student, nested function will initialize every student before loop
+Creation of reminders and every subsequent reminder logged in separate files, as well as errors in generation
 
-Applies 12hr to 24 hour conversion in case of AM/PM inputs: 
+datetime to apply 12hr to 24 hour conversion in case of AM/PM inputs: 
 https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior
 '''
 
@@ -22,7 +23,7 @@ def schedule_reminder(students_manager, reminder_generator, reminder_sender, log
             
         except Exception as e:
             # If there's an error generating a student reminder it logs the event with the student info
-            log_reminder_error(student, f"\n\n\ncouldn't generate the reminder {e}") 
+            log_reminder_error(student) 
 
         # Creates reminder for each student that is repeated every day at the same time
         def student_reminder(s=student):

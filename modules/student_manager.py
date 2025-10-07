@@ -1,6 +1,12 @@
 
 import json
 
+'''
+Class to manage students:
+
+Following naming conventions the methods allow for adding and removing students while saving or loading them to/from json file
+also method to return list, or specific students by dictionary
+'''
 class StudentsManager:
 
     def __init__(self, file_path="students.json"):
